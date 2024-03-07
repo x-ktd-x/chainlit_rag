@@ -1,6 +1,6 @@
 [project]
 # Whether to enable telemetry (default: true). No personal data is collected.
-enable_telemetry = true
+enable_telemetry = false
 
 # List of environment variables to be provided by each user to use the app.
 user_env = []
@@ -9,7 +9,7 @@ user_env = []
 session_timeout = 3600
 
 # Enable third parties caching (e.g LangChain cache)
-cache = false
+cache = true
 
 # Follow symlink for asset mount (see https://github.com/Chainlit/chainlit/issues/317)
 # follow_symlink = false
@@ -34,11 +34,14 @@ multi_modal = true
     # language = "en-US"
 
 [UI]
+# style.css
+custom_css = '/public/style.css'
+
 # Name of the app and chatbot.
-name = "Chatbot"
+name = "SS GPT"
 
 # Show the readme while the thread is empty.
-show_readme_as_default = true
+show_readme_as_default = false
 
 # Description of the app and chatbot. This is used for HTML tags.
 # description = ""
@@ -61,23 +64,23 @@ hide_cot = false
 
 # Override default MUI light theme. (Check theme.ts)
 [UI.theme.light]
-    #background = "#FAFAFA"
-    #paper = "#FFFFFF"
+    background = "#D9D9D9"
+    paper = "#F4F4F4"
 
     [UI.theme.light.primary]
-        #main = "#F80061"
-        #dark = "#980039"
-        #light = "#FFE7EB"
+        main = "#1C4C9C"
+        dark = "#1C4C9C"
+        light = "#E5E5E5"
 
 # Override default MUI dark theme. (Check theme.ts)
 [UI.theme.dark]
-    #background = "#FAFAFA"
-    #paper = "#FFFFFF"
+    #background = "#1C4C9C"
+    #paper = "#8C8C8C"
 
     [UI.theme.dark.primary]
-        #main = "#F80061"
-        #dark = "#980039"
-        #light = "#FFE7EB"
+        main = "#1C4C9C"
+        #dark = "#E5E5E5"
+        #light = "#E5E5E5"
 
 
 [meta]

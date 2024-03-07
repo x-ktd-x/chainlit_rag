@@ -1,0 +1,13 @@
+/* Chatbotのアイコン変える（Lightテーマ, Darkテーマ） */
+.css-nxzw36,.css-w1xcae{
+    /* 画像のURLを指定してください。ここでは仮のURLを使用しています */
+    background-image: url('favicon.png');
+    /* 背景画像が要素の全体に表示されるように設定 */
+    background-size: cover;
+}
+
+/* readmeを消す */
+.css-c853e8 {
+    display: none !important;
+}
+
