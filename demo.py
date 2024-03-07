@@ -1,4 +1,3 @@
-import os
 import chainlit as cl
 from langchain.prompts import PromptTemplate
 from langchain.document_loaders import PyMuPDFLoader
@@ -7,11 +6,6 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage
-from dotenv import load_dotenv
-
-# 環境変数読み込み
-load_dotenv()
-openai_api_key = os.getenv("OPENAI_API_KEY")
 
 # プロンプト定義
 prompt = PromptTemplate(
@@ -69,7 +63,7 @@ async def on_message(input_message: cl.Message):
     """メッセージが送られるたびに呼び出される."""
 
     # チャット用のOpenAIのモデル
-    open_ai = ChatOpenAI(api_key=openai_api_key, model="gpt-3.5-turbo")
+    open_ai = ChatOpenAI(model="gpt-3.5-turbo")
 
     # セッションからベクトルストアを取得（この中にPDFの内容がベクトル化されたものが格納されている）
     database = cl.user_session.get("data")
