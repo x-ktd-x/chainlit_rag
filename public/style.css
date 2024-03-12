@@ -7,7 +7,29 @@
 }
 
 /* readmeを消す */
-.css-c853e8 {
+.css-1mzerio {
     display: none !important;
 }
 
+/* NewChatのdescriptionを消す */
+.css-1ty026z {
+    display: none;
+}
+
+/* description消した分スタイル整える */
+.css-nd13u3 {
+    justify-content: center!important;
+    padding: 0px 16px 16px 16px!important;
+}
+
+/* 押しても戻らん「Go back to chat」を消す */
+.css-17xlwvo {
+    display: none!important;
+}
+
+/* NewChatを左よせ */
+.css-1ytqtrj {
+    /* width: 100%;
+    justify-content: space-between;
+    margin-left: 30px!important; */
+  }
